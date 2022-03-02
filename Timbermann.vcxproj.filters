@@ -11,6 +11,12 @@
     <Filter Include="Pliki zasobów\fonts">
       <UniqueIdentifier>{2bfc8aad-6fdb-4d5a-afbd-26f45f33fc4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{f4711153-3e3b-46fe-934d-0b6a6fee2be8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki zasobów\readme">
+      <UniqueIdentifier>{051fe637-1ab9-4aa3-acbf-931a3c068c3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll">
@@ -46,8 +52,25 @@
     <None Include="sfml-window-d-2.dll">
       <Filter>Pliki zasobów\dll</Filter>
     </None>
+    <None Include="README.md">
+      <Filter>Pliki zasobów\readme</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp" />
+    <ClCompile Include="classes\Rectangle.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\Window.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="classes\Rectangle.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\Window.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
