@@ -1,7 +1,9 @@
 #pragma once
+
 #include <SFML/Graphics.hpp>
 
 #include "Tree.h"
+#include "Player.h"
 
 using std::string;
 
@@ -13,6 +15,7 @@ private:
 	sf::Color backColor = sf::Color::Black;
 
 	Tree tree;
+	Player player;
 
 	void createWindow(sf::Vector2u size, string title);
 	void initVariables();

@@ -8,7 +8,7 @@ sf::RectangleShape TreeTrunk::getRectangle()
 
 TreeTrunk::TreeTrunk(sf::Vector2f size, sf::Color color, sf::Vector2f position)
 {
-	inRectangle(size, color, position);
+	inRectangle(size, color, position, 1, sf::Color::Black);
 }
 
 void TreeTrunk::draw(sf::RenderTarget& target, sf::RenderStates states) const

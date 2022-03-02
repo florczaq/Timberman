@@ -1,65 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Pliki zasobów">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Pliki zasobów\dll">
-      <UniqueIdentifier>{90305142-5724-4936-a584-393bac305e69}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki zasobów\fonts">
-      <UniqueIdentifier>{2bfc8aad-6fdb-4d5a-afbd-26f45f33fc4a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes">
       <UniqueIdentifier>{f4711153-3e3b-46fe-934d-0b6a6fee2be8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki zasobów\readme">
-      <UniqueIdentifier>{051fe637-1ab9-4aa3-acbf-931a3c068c3e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\hpp">
-      <UniqueIdentifier>{3f0d591d-e355-4bf9-8eab-b12a99baa361}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes\cpp">
       <UniqueIdentifier>{3cb4eda6-8965-4560-8ea3-908efa8c12a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resources\dll">
+      <UniqueIdentifier>{90305142-5724-4936-a584-393bac305e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\fonts">
+      <UniqueIdentifier>{2bfc8aad-6fdb-4d5a-afbd-26f45f33fc4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\readme">
+      <UniqueIdentifier>{051fe637-1ab9-4aa3-acbf-931a3c068c3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\h">
+      <UniqueIdentifier>{3f0d591d-e355-4bf9-8eab-b12a99baa361}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-audio-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-audio-d-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-graphics-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-graphics-d-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-network-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-network-d-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-system-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-system-d-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-window-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="sfml-window-d-2.dll">
-      <Filter>Pliki zasobów\dll</Filter>
+      <Filter>Resources\dll</Filter>
     </None>
     <None Include="README.md">
-      <Filter>Pliki zasobów\readme</Filter>
+      <Filter>Resources\readme</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -76,19 +76,25 @@
     <ClCompile Include="classes\Window.cpp">
       <Filter>Classes\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="classes\Player.cpp">
+      <Filter>Classes\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classes\Rectangle.h">
-      <Filter>Classes\hpp</Filter>
+      <Filter>Classes\h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Tree.h">
-      <Filter>Classes\hpp</Filter>
+      <Filter>Classes\h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Window.h">
-      <Filter>Classes\hpp</Filter>
+      <Filter>Classes\h</Filter>
     </ClInclude>
     <ClInclude Include="classes\TreeTrunk.h">
-      <Filter>Classes\hpp</Filter>
+      <Filter>Classes\h</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\Player.h">
+      <Filter>Classes\h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

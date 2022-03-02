@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
+typedef unsigned int ui;
+
 class Rectangle : public sf::Drawable
 {
 protected:

@@ -7,9 +7,9 @@ Tree::Tree()
 
 Tree::Tree(ui windowWidth, ui windowHeigh, sf::Color trunkColor)
 {
-	float tWidth = windowWidth * 0.33f, tHeight = windowHeigh * 0.1f;
+	float tWidth = windowWidth * 0.33f, tHeight = windowHeigh * 0.2f;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < int(windowHeigh/tHeight); i++)
 		trunks.push_back(
 			TreeTrunk(
 				sf::Vector2f(tWidth, tHeight),
