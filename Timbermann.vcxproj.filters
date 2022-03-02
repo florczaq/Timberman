@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów\dll">
+      <UniqueIdentifier>{90305142-5724-4936-a584-393bac305e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki zasobów\fonts">
+      <UniqueIdentifier>{2bfc8aad-6fdb-4d5a-afbd-26f45f33fc4a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openal32.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-audio-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-audio-d-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-graphics-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-graphics-d-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-network-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-network-d-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-system-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-system-d-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-window-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+    <None Include="sfml-window-d-2.dll">
+      <Filter>Pliki zasobów\dll</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source.cpp" />
+  </ItemGroup>
+</Project>
