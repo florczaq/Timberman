@@ -146,6 +146,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="classes\Rectangle.cpp" />
+    <ClCompile Include="classes\Tree.cpp" />
+    <ClCompile Include="classes\TreeTrunk.cpp" />
     <ClCompile Include="classes\Window.cpp" />
     <ClCompile Include="source.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Mikolaj\Documents\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -168,6 +170,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classes\Rectangle.h" />
+    <ClInclude Include="classes\Tree.h" />
+    <ClInclude Include="classes\TreeTrunk.h" />
     <ClInclude Include="classes\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

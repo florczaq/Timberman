@@ -13,3 +13,8 @@ void Rectangle::inRectangle(sf::Vector2f size, sf::Color fillColor, sf::Vector2f
 	rectangle.setOutlineThickness(outlineThickness);
 	rectangle.setOutlineColor(outlineColor);
 }
+
+void Rectangle::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+	target.draw(rectangle);
+}

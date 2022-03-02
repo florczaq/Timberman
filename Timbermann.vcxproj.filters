@@ -17,6 +17,12 @@
     <Filter Include="Pliki zasobów\readme">
       <UniqueIdentifier>{051fe637-1ab9-4aa3-acbf-931a3c068c3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\hpp">
+      <UniqueIdentifier>{3f0d591d-e355-4bf9-8eab-b12a99baa361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\cpp">
+      <UniqueIdentifier>{3cb4eda6-8965-4560-8ea3-908efa8c12a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll">
@@ -59,18 +65,30 @@
   <ItemGroup>
     <ClCompile Include="source.cpp" />
     <ClCompile Include="classes\Rectangle.cpp">
-      <Filter>Classes</Filter>
+      <Filter>Classes\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\Tree.cpp">
+      <Filter>Classes\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\TreeTrunk.cpp">
+      <Filter>Classes\cpp</Filter>
     </ClCompile>
     <ClCompile Include="classes\Window.cpp">
-      <Filter>Classes</Filter>
+      <Filter>Classes\cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classes\Rectangle.h">
-      <Filter>Classes</Filter>
+      <Filter>Classes\hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\Tree.h">
+      <Filter>Classes\hpp</Filter>
     </ClInclude>
     <ClInclude Include="classes\Window.h">
-      <Filter>Classes</Filter>
+      <Filter>Classes\hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\TreeTrunk.h">
+      <Filter>Classes\hpp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

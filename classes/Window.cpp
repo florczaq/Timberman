@@ -8,6 +8,10 @@ void Window::createWindow(sf::Vector2u size, string title)
 
 void Window::initVariables()
 {
+	sf::Vector2u wSize = window->getSize();
+
+	tree = Tree(wSize.x, wSize.y, sf::Color(100,100,200));
+
 
 }
 
@@ -22,9 +26,11 @@ void Window::actionEvent()
 	}
 }
 
-Window::Window(sf::Vector2u size, string title)
+Window::Window(sf::Vector2u size, string title, sf::Color backgroundcolor)
 {
+	this->backColor = backgroundcolor;
 	createWindow(size, title);
+
 	initVariables();
 }
 
@@ -40,7 +46,8 @@ void Window::update()
 
 void Window::display()
 {
-	window->clear();
+	window->clear(backColor);
+	window->draw(tree);
 	window->display();
 }
 
