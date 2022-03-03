@@ -79,6 +79,9 @@
     <ClCompile Include="classes\Player.cpp">
       <Filter>Classes\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="classes\Ground.cpp">
+      <Filter>Classes\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classes\Rectangle.h">
@@ -94,6 +97,9 @@
       <Filter>Classes\h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Player.h">
+      <Filter>Classes\h</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\Ground.h">
       <Filter>Classes\h</Filter>
     </ClInclude>
   </ItemGroup>

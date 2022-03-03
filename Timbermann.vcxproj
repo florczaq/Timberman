@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="classes\Ground.cpp" />
     <ClCompile Include="classes\Player.cpp" />
     <ClCompile Include="classes\Rectangle.cpp" />
     <ClCompile Include="classes\Tree.cpp" />
@@ -170,6 +171,7 @@
     <None Include="sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="classes\Ground.h" />
     <ClInclude Include="classes\Player.h" />
     <ClInclude Include="classes\Rectangle.h" />
     <ClInclude Include="classes\Tree.h" />

@@ -4,6 +4,7 @@
 
 #include "Tree.h"
 #include "Player.h"
+#include "Ground.h"
 
 using std::string;
 
@@ -16,6 +17,7 @@ private:
 
 	Tree tree;
 	Player player;
+	Ground ground;
 
 	void createWindow(sf::Vector2u size, string title);
 	void initVariables();
