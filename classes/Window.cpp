@@ -29,7 +29,9 @@ void Window::actionEvent(sf::Clock& clock) {
 
 		case sf::Event::KeyPressed:
 			player.changePosition(event.key.code);
-			if ((event.key.code == sf::Keyboard::Space || event.key.code == sf::Keyboard::C) && clock.getElapsedTime().asMilliseconds() >= 100) {
+			if ((event.key.code == sf::Keyboard::Space || event.key.code == sf::Keyboard::C) &&
+				clock.getElapsedTime().asMilliseconds() >= 10) {
+
 				tree.cutLastTrunk(ui(wSize.x), ui(wSize.y), ground.getBounds(), playerPositions);
 				clock.restart();
 			}
@@ -41,7 +43,7 @@ void Window::actionEvent(sf::Clock& clock) {
 void Window::createWindow(sf::Vector2u size, string title)
 {
 	window = new sf::RenderWindow(sf::VideoMode(size.x, size.y), title, sf::Style::Close);
-	window->setFramerateLimit(200);
+	window->setFramerateLimit(60);
 }
 
 Window::Window(sf::Vector2u size, string title, sf::Color backgroundcolor) {

@@ -25,7 +25,7 @@ Tree::Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<fl
 
 void Tree::tMove(sf::FloatRect groundBounds)
 {
-	elements.at(0).eMove(this->speed * 1.2, groundBounds);
+	elements.at(0).eMove(this->speed, groundBounds);
 	for (int i = 1; i < elements.size(); i++)
 		elements.at(i).eMove(this->speed, elements.at(i - 1).getTrunkRect());
 }
@@ -44,7 +44,7 @@ void Tree::cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, ve
 				trunkColor, positions, withTrunk
 			)
 		);
-		withTrunk = withTrunk ? false : true;
+		withTrunk = withTrunk ? false : rand()%2==0;
 	}
 }
 
