@@ -3,13 +3,15 @@
 void Window::initVariables() {
 	wSize = sf::Vector2f(float(window->getSize().x), float(window->getSize().y * 0.95));
 
-	float playerPositions[2] = { wSize.x * 0.15f, wSize.x * 0.85f };
-	float groundSizeY = window->getSize().y * 0.05;
+	playerPositions.push_back(wSize.x * 0.15f);
+	playerPositions.push_back(wSize.x * 0.85f);
 
-	tree = Tree(wSize.x, wSize.y, sf::Color(100, 100, 200));
-	
+	float groundSizeY = window->getSize().y * 0.05f;
+
+	tree = Tree(wSize.x, wSize.y, sf::Color(100, 100, 200), playerPositions);
+
 	player = Player(sf::Vector2f(wSize.x * 0.1f, wSize.y * 0.1f), sf::Color::Blue, playerPositions, wSize.y);
-	
+
 	ground = Ground(
 		sf::Vector2f(fl(wSize.x), groundSizeY),
 		sf::Color(100, 150, 200),
@@ -20,22 +22,17 @@ void Window::initVariables() {
 void Window::actionEvent(sf::Clock& clock) {
 	while (window->pollEvent(event)) {
 		switch (event.type) {
-		
+
 		case sf::Event::Closed:
-			
 			window->close();
-			
 			break;
-		
+
 		case sf::Event::KeyPressed:
-			
 			player.changePosition(event.key.code);
-		
-			if (event.key.code == sf::Keyboard::Space && clock.getElapsedTime().asMilliseconds() >= 100) {
-				tree.cutLastTrunk(wSize.x, wSize.y, ground.getBounds());
+			if ((event.key.code == sf::Keyboard::Space || event.key.code == sf::Keyboard::C) && clock.getElapsedTime().asMilliseconds() >= 100) {
+				tree.cutLastTrunk(ui(wSize.x), ui(wSize.y), ground.getBounds(), playerPositions);
 				clock.restart();
 			}
-			
 			break;
 		}
 	}
@@ -44,7 +41,7 @@ void Window::actionEvent(sf::Clock& clock) {
 void Window::createWindow(sf::Vector2u size, string title)
 {
 	window = new sf::RenderWindow(sf::VideoMode(size.x, size.y), title, sf::Style::Close);
-	window->setFramerateLimit(60);
+	window->setFramerateLimit(200);
 }
 
 Window::Window(sf::Vector2u size, string title, sf::Color backgroundcolor) {
@@ -61,7 +58,7 @@ bool Window::isOpen()
 
 void Window::update(sf::Clock& clock)
 {
-	tree.canMove(ground.getBounds());
+	tree.tMove(ground.getBounds());
 	actionEvent(clock);
 }
 

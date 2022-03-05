@@ -7,7 +7,11 @@ sf::RectangleShape TreeTrunk::getRectangle()
 
 void TreeTrunk::move(float speed)
 {
-	rectangle.move(0.f, speed);
+	Rec::myMove(speed);
+}
+
+TreeTrunk::TreeTrunk()
+{
 }
 
 TreeTrunk::TreeTrunk(sf::Vector2f size, sf::Color color, sf::Vector2f position)

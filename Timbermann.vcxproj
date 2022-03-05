@@ -150,6 +150,8 @@
     <ClCompile Include="classes\Player.cpp" />
     <ClCompile Include="classes\Rectangle.cpp" />
     <ClCompile Include="classes\Tree.cpp" />
+    <ClCompile Include="classes\TreeBranch.cpp" />
+    <ClCompile Include="classes\TreeElement.cpp" />
     <ClCompile Include="classes\TreeTrunk.cpp" />
     <ClCompile Include="classes\Window.cpp" />
     <ClCompile Include="source.cpp">
@@ -176,6 +178,8 @@
     <ClInclude Include="classes\Player.h" />
     <ClInclude Include="classes\Rectangle.h" />
     <ClInclude Include="classes\Tree.h" />
+    <ClInclude Include="classes\TreeBranch.h" />
+    <ClInclude Include="classes\TreeElement.h" />
     <ClInclude Include="classes\TreeTrunk.h" />
     <ClInclude Include="classes\Window.h" />
   </ItemGroup>

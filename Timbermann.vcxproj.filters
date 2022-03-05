@@ -20,7 +20,7 @@
     <Filter Include="Resources\readme">
       <UniqueIdentifier>{051fe637-1ab9-4aa3-acbf-931a3c068c3e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\h">
+    <Filter Include="Classes\.h">
       <UniqueIdentifier>{3f0d591d-e355-4bf9-8eab-b12a99baa361}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -82,25 +82,33 @@
     <ClCompile Include="classes\Ground.cpp">
       <Filter>Classes\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="classes\TreeBranch.cpp">
+      <Filter>Classes\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\TreeElement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classes\Rectangle.h">
-      <Filter>Classes\h</Filter>
+      <Filter>Classes\.h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Tree.h">
-      <Filter>Classes\h</Filter>
+      <Filter>Classes\.h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Window.h">
-      <Filter>Classes\h</Filter>
+      <Filter>Classes\.h</Filter>
     </ClInclude>
     <ClInclude Include="classes\TreeTrunk.h">
-      <Filter>Classes\h</Filter>
+      <Filter>Classes\.h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Player.h">
-      <Filter>Classes\h</Filter>
+      <Filter>Classes\.h</Filter>
     </ClInclude>
     <ClInclude Include="classes\Ground.h">
-      <Filter>Classes\h</Filter>
+      <Filter>Classes\.h</Filter>
     </ClInclude>
+    <ClInclude Include="classes\TreeBranch.h">
+      <Filter>Classes\.h</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\TreeElement.h" />
   </ItemGroup>
 </Project>
