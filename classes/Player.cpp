@@ -2,7 +2,7 @@
 
 Player::Player() {}
 
-Player::Player(sf::Vector2f size, sf::Color fillColor, float positions[2], ui wH)
+Player::Player(sf::Vector2f size, sf::Color fillColor, float positions[2], float wH)
 {
 	this->positions[0] = positions[0];
 	this->positions[1] = positions[1];

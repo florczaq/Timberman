@@ -14,6 +14,16 @@ void Rectangle::inRectangle(sf::Vector2f size, sf::Color fillColor, sf::Vector2f
 	rectangle.setOutlineColor(outlineColor);
 }
 
+sf::FloatRect Rectangle::getBounds()
+{
+	return rectangle.getGlobalBounds();
+}
+
+bool Rectangle::hover(sf::FloatRect rect)
+{
+	return rectangle.getGlobalBounds().intersects(rect);
+}
+
 void Rectangle::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(rectangle);

@@ -8,5 +8,6 @@ class TreeTrunk : public Rectangle
 public :
 	TreeTrunk(sf::Vector2f size, sf::Color fillColor, sf::Vector2f position);
 	sf::RectangleShape getRectangle();
+	void move(float speed);
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

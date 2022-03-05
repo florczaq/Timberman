@@ -6,6 +6,8 @@
 #include "Player.h"
 #include "Ground.h"
 
+typedef float fl;
+
 using std::string;
 
 class Window 
@@ -14,6 +16,7 @@ private:
 	sf::RenderWindow* window = new sf::RenderWindow();
 	sf::Event event = sf::Event();
 	sf::Color backColor = sf::Color::Black;
+	sf::Vector2f wSize = sf::Vector2f(0.f,0.f);
 
 	Tree tree;
 	Player player;
@@ -21,11 +24,11 @@ private:
 
 	void createWindow(sf::Vector2u size, string title);
 	void initVariables();
-	void actionEvent();
+	void actionEvent(sf::Clock& clock);
 public:
-	Window(sf::Vector2u size, string title, sf::Color backgroundColor);
 	~Window();
+	Window(sf::Vector2u size, string title, sf::Color backgroundColor);
 	bool isOpen();
-	void update();
+	void update(sf::Clock& clock);
 	void display();
 };
