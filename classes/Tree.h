@@ -12,9 +12,10 @@ class Tree : public sf::Drawable
 private :
 	float speed = 0;
 	float tWidth = 0, tHeight = 0;
+	
 	sf::Color trunkColor;
 	vector<TreeTrunk> trunks;
-	//void move();
+
 	void move(const int index);
 public :
 	Tree(); 

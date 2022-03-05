@@ -10,11 +10,14 @@ void Window::initVariables() {
 	wSize = sf::Vector2f(float(window->getSize().x), float(window->getSize().y * 0.95));
 
 	float playerPositions[2] = { wSize.x * 0.15f, wSize.x * 0.85f };
-
+	float groundSizeY = window->getSize().y * 0.05;
 	tree = Tree(wSize.x, wSize.y, sf::Color(100, 100, 200));
-	player = Player(sf::Vector2f(wSize.x * 0.1f, wSize.y * 0.2f), sf::Color::Blue, playerPositions, wSize.y);
-	ground = Ground(sf::Vector2f(fl(wSize.x), fl(window->getSize().y*0.05)), sf::Color(100, 150, 200), 
-					sf::Vector2f(fl(wSize.x * 0.5f), fl(wSize.y)), 2.f, sf::Color::Black);
+	player = Player(sf::Vector2f(wSize.x * 0.1f, wSize.y * 0.1f), sf::Color::Blue, playerPositions, wSize.y);
+	ground = Ground(
+		sf::Vector2f(fl(wSize.x), groundSizeY),
+		sf::Color(100, 150, 200), 
+		sf::Vector2f(fl(wSize.x * 0.5f),fl(window->getSize().y - groundSizeY / 2)), 
+		2.f, sf::Color::Black);
 }
 
 void Window::actionEvent(sf::Clock& clock) {
@@ -46,7 +49,7 @@ bool Window::isOpen()
 	return window->isOpen();
 }
 
-void Window::update(sf::Clock &clock)
+void Window::update(sf::Clock& clock)
 {
 	tree.canMove(ground.getBounds());
 	actionEvent(clock);

@@ -11,12 +11,12 @@ Tree::Tree(float windowWidth, float windowHeigh, sf::Color trunkColor)
 	this->tWidth = float(windowWidth * 0.33f);
 	this->tHeight = float(windowHeigh * 0.2f);
 	this->speed = 20.f;
-	//int(windowHeigh / tHeight) - 1
-	for (int i = int(windowHeigh / tHeight) - 1; i >= 0; i--)
+
+	for (int i = int(windowHeigh / tHeight); i >= 0; i--)
 		trunks.push_back(
 			TreeTrunk(
 				sf::Vector2f(tWidth, tHeight), trunkColor,
-				sf::Vector2f(windowWidth * 0.5f, ((tHeight * 0.5f) + (i * tHeight)))
+				sf::Vector2f(windowWidth * 0.5f, -((tHeight * 0.5f) + (i * tHeight)))
 			));
 
 }
