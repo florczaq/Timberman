@@ -1,6 +1,5 @@
 #include "TreeTrunk.h"
 
-
 sf::RectangleShape TreeTrunk::getRectangle()
 {
 	return Rec::rectangle;

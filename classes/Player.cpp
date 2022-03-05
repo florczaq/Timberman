@@ -2,10 +2,10 @@
 
 Player::Player() {}
 
-Player::Player(sf::Vector2f size, sf::Color fillColor, float positions[2], float wH)
+Player::Player(sf::Vector2f size, sf::Color fillColor, float mPositions[2], float wH)
 {
-	this->positions[0] = positions[0];
-	this->positions[1] = positions[1];
+	for (int i = 0; i < 2; i++) positions[i] = mPositions[i];
+		
 	rct::inRectangle(size, fillColor, sf::Vector2f(positions[0], wH - size.y * 0.5f));
 }
 

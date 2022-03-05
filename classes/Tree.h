@@ -21,6 +21,6 @@ public :
 	Tree(); 
 	Tree(float windowWidth, float windowHeigh, sf::Color trunkColor);
 	void canMove(sf::FloatRect groundBounds);
-	void cutLastTrunk(ui windowWidth, ui windowHeigh);
+	void cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground);
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
