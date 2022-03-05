@@ -23,6 +23,9 @@
     <Filter Include="Classes\.h">
       <UniqueIdentifier>{3f0d591d-e355-4bf9-8eab-b12a99baa361}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\pictures">
+      <UniqueIdentifier>{49230d0c-3c94-4903-b4e8-2ef8121d9a24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="openal32.dll">
@@ -85,7 +88,10 @@
     <ClCompile Include="classes\TreeBranch.cpp">
       <Filter>Classes\cpp</Filter>
     </ClCompile>
-    <ClCompile Include="classes\TreeElement.cpp" />
+    <ClCompile Include="classes\TreeElement.cpp">
+      <Filter>Classes\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="classes\MySprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="classes\Rectangle.h">
@@ -109,6 +115,14 @@
     <ClInclude Include="classes\TreeBranch.h">
       <Filter>Classes\.h</Filter>
     </ClInclude>
-    <ClInclude Include="classes\TreeElement.h" />
+    <ClInclude Include="classes\TreeElement.h">
+      <Filter>Classes\.h</Filter>
+    </ClInclude>
+    <ClInclude Include="classes\MySprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="pictures\wood.png">
+      <Filter>Resources\pictures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -5,21 +5,24 @@ sf::RectangleShape TreeTrunk::getRectangle()
 	return Rec::rectangle;
 }
 
-void TreeTrunk::move(float speed)
+void TreeTrunk::trMove(float speed)
 {
 	Rec::myMove(speed);
+	MySprite::move(speed);
 }
 
 TreeTrunk::TreeTrunk()
 {
 }
 
-TreeTrunk::TreeTrunk(sf::Vector2f size, sf::Color color, sf::Vector2f position)
+TreeTrunk::TreeTrunk(sf::Vector2f size, sf::Color color, sf::Vector2f position, sf::Texture &texture)
 {
 	inRectangle(size, color, position, 1, sf::Color::Black);
+	MySprite::loadSprite(texture, position);
 }
 
 void TreeTrunk::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	target.draw(Rec::rectangle);
+	//target.draw(Rec::rectangle);
+	target.draw(sprite);
 }

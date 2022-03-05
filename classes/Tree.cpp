@@ -5,7 +5,7 @@ Tree::Tree()
 
 }
 
-Tree::Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<float> positions)
+Tree::Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<float> positions, sf::Texture &trunkTexture)
 {
 	this->trunkColor = trunkColor;
 	this->tWidth = float(windowWidth * 0.33f);
@@ -16,10 +16,14 @@ Tree::Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<fl
 		elements.push_back(
 			TreeElement(
 				sf::Vector2f(tWidth, tHeight),
-				sf::Vector2f(windowWidth * 0.5f, -((tHeight * 0.5f) + (i * tHeight))), trunkColor, positions, withTrunk)
+				sf::Vector2f(windowWidth * 0.5f, -((tHeight * 0.5f) + (i * tHeight))),
+				trunkColor, positions,
+				withTrunk, trunkTexture
+			)
 		);
 		withTrunk = withTrunk ? false : true;
 	}
+
 	withTrunk = false;
 }
 
@@ -30,7 +34,7 @@ void Tree::tMove(sf::FloatRect groundBounds)
 		elements.at(i).eMove(this->speed, elements.at(i - 1).getTrunkRect());
 }
 
-void Tree::cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, vector<float> positions)
+void Tree::cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, vector<float> positions, sf::Texture &trunkTexture)
 {
 	if (elements.at(0).trunkHover(ground))
 	{
@@ -41,10 +45,11 @@ void Tree::cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, ve
 			TreeElement(
 				sf::Vector2f(tWidth, tHeight),
 				sf::Vector2f(windowWidth * 0.5f, (-tHeight / 2)),
-				trunkColor, positions, withTrunk
+				trunkColor, positions, withTrunk,
+				trunkTexture
 			)
 		);
-		withTrunk = withTrunk ? false : rand()%2==0;
+		withTrunk = withTrunk ? false : rand() % 2 == 0;
 	}
 }
 

@@ -14,7 +14,7 @@ private:
 	TreeTrunk trunk;
 public:
 	TreeElement();
-	TreeElement(sf::Vector2f size, sf::Vector2f position, sf::Color color, vector<float> myPositions, bool withBranch);
+	TreeElement(sf::Vector2f size, sf::Vector2f position, sf::Color color, vector<float> myPositions, bool withBranch, sf::Texture &trunkTexture);
 	sf::FloatRect getTrunkRect();
 	bool trunkHover(sf::FloatRect rect);
 	void eMove(float speed, sf::FloatRect rect);

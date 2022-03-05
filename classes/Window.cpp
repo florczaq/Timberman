@@ -2,21 +2,22 @@
 
 void Window::initVariables() {
 	wSize = sf::Vector2f(float(window->getSize().x), float(window->getSize().y * 0.95));
-
 	playerPositions.push_back(wSize.x * 0.15f);
 	playerPositions.push_back(wSize.x * 0.85f);
 
 	float groundSizeY = window->getSize().y * 0.05f;
 
-	tree = Tree(wSize.x, wSize.y, sf::Color(100, 100, 200), playerPositions);
+	textures.push_back(loadTexture("pictures/wood.png"));
 
+	tree = Tree(wSize.x, wSize.y, sf::Color(100, 100, 200), playerPositions, textures.at(0));
 	player = Player(sf::Vector2f(wSize.x * 0.1f, wSize.y * 0.1f), sf::Color::Blue, playerPositions, wSize.y);
-
-	ground = Ground(
-		sf::Vector2f(fl(wSize.x), groundSizeY),
-		sf::Color(100, 150, 200),
-		sf::Vector2f(fl(wSize.x * 0.5f), fl(window->getSize().y - groundSizeY / 2)),
-		2.f, sf::Color::Black);
+	ground =
+		Ground(
+			sf::Vector2f(fl(wSize.x), groundSizeY),
+			sf::Color(100, 150, 200),
+			sf::Vector2f(fl(wSize.x * 0.5f), fl(window->getSize().y - groundSizeY / 2)),
+			2.f, sf::Color::Black
+		);
 }
 
 void Window::actionEvent(sf::Clock& clock) {
@@ -32,7 +33,7 @@ void Window::actionEvent(sf::Clock& clock) {
 			if ((event.key.code == sf::Keyboard::Space || event.key.code == sf::Keyboard::C) &&
 				clock.getElapsedTime().asMilliseconds() >= 10) {
 
-				tree.cutLastTrunk(ui(wSize.x), ui(wSize.y), ground.getBounds(), playerPositions);
+				tree.cutLastTrunk(ui(wSize.x), ui(wSize.y), ground.getBounds(), playerPositions, textures.at(0));
 				clock.restart();
 			}
 			break;
@@ -76,4 +77,11 @@ void Window::display()
 Window::~Window()
 {
 	delete window;
+}
+
+sf::Texture Window::loadTexture(string path)
+{
+	sf::Texture texture;
+	texture.loadFromFile(path);
+	return texture;
 }

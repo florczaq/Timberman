@@ -5,19 +5,16 @@ TreeElement::TreeElement()
 
 }
 
-TreeElement::TreeElement(sf::Vector2f size, sf::Vector2f position, sf::Color color, vector<float> myPositions, bool withBranch)
+TreeElement::TreeElement(sf::Vector2f size, sf::Vector2f position, sf::Color color, vector<float> myPositions, bool withBranch, sf::Texture &trunkTexture)
 {
 	int posx = (rand() % 100) % 2;
-	trunk = TreeTrunk(size, color, position);
+	trunk = TreeTrunk(size, color, position, trunkTexture);
 	if (withBranch)
 		branch = TreeBranch(
 			sf::Vector2f(size.x, size.y * 0.15f),
 			sf::Vector2f(myPositions[posx], position.y),
 			color
 		);
-
-	std::cout << rand() % 2 << std::endl;
-
 }
 
 sf::FloatRect TreeElement::getTrunkRect()
@@ -33,7 +30,7 @@ bool TreeElement::trunkHover(sf::FloatRect rect)
 void TreeElement::eMove(float speed, sf::FloatRect rect)
 {
 	if (!trunk.hover(rect)) {
-		trunk.myMove(speed);
+		trunk.trMove(speed);
 		branch.myMove(speed);
 	}
 }

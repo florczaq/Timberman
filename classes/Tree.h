@@ -22,9 +22,9 @@ private:
 	vector <TreeElement> elements;
 public:
 	Tree();
-	Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<float> positions);
+	Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<float> positions, sf::Texture &trunkTexture);
 	void tMove
 	(sf::FloatRect groundBounds);
-	void cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, vector<float> positions);
+	void cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, vector<float> positions, sf::Texture &trunkTexture);
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

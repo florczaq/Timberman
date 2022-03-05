@@ -1,6 +1,8 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include<vector>
+#include <map>
 
 #include "Tree.h"
 #include "Player.h"
@@ -8,7 +10,7 @@
 
 typedef float fl;
 
-using std::string;
+using std::string, std::map;
 
 class Window
 {
@@ -18,11 +20,13 @@ private:
 	sf::Color backColor = sf::Color::Black;
 	sf::Vector2f wSize = sf::Vector2f(0.f, 0.f);
 	vector <float> playerPositions; // values in constr
+	vector<sf::Texture> textures;
 
 	Tree tree;
 	Player player;
 	Ground ground;
 
+	sf::Texture loadTexture(string path);
 	void createWindow(sf::Vector2u size, string title);
 	void initVariables();
 	void actionEvent(sf::Clock& clock);
