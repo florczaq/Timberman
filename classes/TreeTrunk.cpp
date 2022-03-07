@@ -24,6 +24,6 @@ TreeTrunk::TreeTrunk(sf::Vector2f size, sf::Color color, sf::Vector2f position, 
 
 void TreeTrunk::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	//target.draw(Rec::rectangle);
-	target.draw(sprite);
+	target.draw(Rec::rectangle);
+	//target.draw(sprite);
 }
