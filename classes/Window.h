@@ -15,6 +15,7 @@ using std::string, std::map;
 class Window
 {
 private:
+	int result = 0;
 	sf::RenderWindow* window = new sf::RenderWindow();
 	sf::Event event = sf::Event();
 	sf::Color backColor = sf::Color::Black;
@@ -25,15 +26,18 @@ private:
 	Tree tree;
 	Player player;
 	Ground ground;
-
+	
 	sf::Texture loadTexture(string path);
 	void createWindow(sf::Vector2u size, string title);
-	void initVariables();
 	void actionEvent(sf::Clock& clock);
 public:
 	~Window();
+	Window();
 	Window(sf::Vector2u size, string title, sf::Color backgroundColor);
+	void initVariables();
 	bool isOpen();
 	void update(sf::Clock& clock);
 	void display();
+	int getResult();
+
 };

@@ -27,6 +27,11 @@ bool TreeElement::trunkHover(sf::FloatRect rect)
 	return trunk.hover(rect);
 }
 
+bool TreeElement::branchHover(sf::FloatRect rect)
+{
+	return branch.hover(rect);
+}
+
 void TreeElement::eMove(float speed, sf::FloatRect rect)
 {
 	if (!trunk.hover(rect)) {

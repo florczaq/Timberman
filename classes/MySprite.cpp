@@ -13,9 +13,19 @@ void MySprite::move(float speed)
 	sprite.move(0.f, speed);
 }
 
+void MySprite::scale(sf::Vector2f scalexy)
+{
+	sprite.setScale(scalexy);
+}
+
 sf::Sprite MySprite::getSprite() const
 {
 	return sprite;
+}
+
+sf::FloatRect MySprite::getLocalBounds()
+{
+	return sprite.getLocalBounds();
 }
 
 void MySprite::setPosition(sf::Vector2f position)

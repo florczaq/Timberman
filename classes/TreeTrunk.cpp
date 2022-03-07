@@ -17,8 +17,9 @@ TreeTrunk::TreeTrunk()
 
 TreeTrunk::TreeTrunk(sf::Vector2f size, sf::Color color, sf::Vector2f position, sf::Texture &texture)
 {
-	inRectangle(size, color, position, 1, sf::Color::Black);
+	Rec::inRectangle(size, color, position, 2.f, sf::Color::Black);
 	MySprite::loadSprite(texture, position);
+	MySprite::scale(sf::Vector2f(size.x/getLocalBounds().width, size.y/getLocalBounds().height));
 }
 
 void TreeTrunk::draw(sf::RenderTarget& target, sf::RenderStates states) const

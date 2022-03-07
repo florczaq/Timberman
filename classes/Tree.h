@@ -23,8 +23,8 @@ private:
 public:
 	Tree();
 	Tree(float windowWidth, float windowHeigh, sf::Color trunkColor, vector<float> positions, sf::Texture &trunkTexture);
-	void tMove
-	(sf::FloatRect groundBounds);
+	void tMove(sf::FloatRect groundBounds);
+	bool gameOver(sf::FloatRect playerRect);
 	void cutLastTrunk(ui windowWidth, ui windowHeigh, sf::FloatRect ground, vector<float> positions, sf::Texture &trunkTexture);
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
