@@ -3,8 +3,8 @@
 void Window::initVariables() {
 	result = 0;
 	wSize = sf::Vector2f(float(window->getSize().x), float(window->getSize().y * 0.95));
-	playerPositions.push_back(wSize.x * 0.15f);
-	playerPositions.push_back(wSize.x * 0.85f);
+	playerPositions.push_back(wSize.x * 0.20f);
+	playerPositions.push_back(wSize.x * 0.80f);
 
 	float groundSizeY = window->getSize().y * 0.05f;
 

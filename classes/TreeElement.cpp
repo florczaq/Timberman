@@ -42,6 +42,6 @@ void TreeElement::eMove(float speed, sf::FloatRect rect)
 
 void TreeElement::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	target.draw(trunk);
 	target.draw(branch);
+	target.draw(trunk);
 }
