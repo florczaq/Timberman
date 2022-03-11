@@ -14,6 +14,6 @@ public:
 	Player();
 	Player(sf::Vector2f size, sf::Color fillColor, vector<float> positions, float windowHeight);
 
-	void changePosition(sf::Keyboard::Key key);
+	bool changePosition(sf::Keyboard::Key key);
 
 };

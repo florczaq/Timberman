@@ -29,14 +29,14 @@ private:
 	
 	sf::Texture loadTexture(string path);
 	void createWindow(sf::Vector2u size, string title);
-	void actionEvent(sf::Clock& clock);
+	void actionEvent();
 public:
 	~Window();
 	Window();
 	Window(sf::Vector2u size, string title, sf::Color backgroundColor);
 	void initVariables();
 	bool isOpen();
-	void update(sf::Clock& clock);
+	void update();
 	void display();
 	int getResult();
 

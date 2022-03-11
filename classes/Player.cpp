@@ -9,18 +9,19 @@ Player::Player(sf::Vector2f size, sf::Color fillColor, vector<float> myPositions
 	rct::inRectangle(size, fillColor, sf::Vector2f(positions[0], wH - size.y * 0.5f));
 }
 
-void Player::changePosition(sf::Keyboard::Key key)
+bool Player::changePosition(sf::Keyboard::Key key)
 {
 	float posY = rectangle.getPosition().y;
 	switch (key) {
 	case sf::Keyboard::A:
 	case sf::Keyboard::Left:
 		rectangle.setPosition(positions[0], posY);
-		break;
+		return true;
 	case sf::Keyboard::D:
 	case sf::Keyboard::Right:
 		rectangle.setPosition(positions[1], posY);
-		break;
+		return true;
+	default: return false;
 	}
 
 }

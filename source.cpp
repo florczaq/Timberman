@@ -14,11 +14,10 @@ int main() {
 	while (result != -1) {
 		
 		result = 0;
-		sf::Clock clock;
 		window.initVariables();
 	
 		while (window.isOpen() && result!=1) {
-			window.update(clock);
+			window.update();
 			window.display();
 			result = window.getResult();
 		}

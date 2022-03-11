@@ -21,7 +21,7 @@ void Window::initVariables() {
 		);
 }
 
-void Window::actionEvent(sf::Clock& clock) {
+void Window::actionEvent() {
 	while (window->pollEvent(event)) {
 		switch (event.type) {
 
@@ -31,20 +31,8 @@ void Window::actionEvent(sf::Clock& clock) {
 			break;
 
 		case sf::Event::KeyPressed:
-			player.changePosition(event.key.code);
-			if (clock.getElapsedTime().asMilliseconds() >= 10) {
-			
-				switch (event.key.code) {
-				case sf::Keyboard::Space:
-				case sf::Keyboard::C:
-				case sf::Keyboard::X:
-				case sf::Keyboard::J:
-				case sf::Keyboard::K:
-					tree.cutLastTrunk(ui(wSize.x), ui(wSize.y), ground.getBounds(), playerPositions, textures.at(0));
-					clock.restart();
-					break;
-				}
-				
+			if (player.changePosition(event.key.code)) {
+				tree.cutLastTrunk(ui(wSize.x), ui(wSize.y), ground.getBounds(), playerPositions, textures.at(0));
 			}
 			break;
 		}
@@ -68,14 +56,13 @@ bool Window::isOpen()
 	return window->isOpen();
 }
 
-void Window::update(sf::Clock& clock)
+void Window::update()
 {
+	actionEvent();
 	tree.tMove(ground.getBounds());
 	if (tree.gameOver(player.getBounds())) {
 		result = 1;
-		//window->close();
 	}
-	actionEvent(clock);
 }
 
 void Window::display()
